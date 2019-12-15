@@ -83,8 +83,12 @@ class App extends Component {
         console.log('I was triggered during render');
         return (
             <div className="App">
-            <h1 className="jumbotron">SGPWCR</h1>
-            <Swapper />
+                <h1 className="jumbotron top">SGPWCR</h1>
+                <div className="bg">
+                    <div className="login">
+                    <Swapper />
+                    </div>
+                </div>
             </div>
         );
     }
