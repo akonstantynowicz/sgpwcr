@@ -1,0 +1,92 @@
+$theme-dark: #1c1c1c;
+$theme-white: #cfcfe2;
+$theme-white-whiter: #e8e8f1;
+$bg-height: 100vh;
+
+.App {
+    text-align: center;
+    color: $theme-dark;
+    background-color: $theme-dark;
+}
+
+.bg {
+    height: $bg-height;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    background-image: url('/bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top {
+    padding: 2rem 0;
+    font-family: 'Girassol';
+    font-size: 4rem;
+    color: $theme-white;
+    background-color: $theme-dark;
+    margin: 0;
+}
+
+.login {
+    padding: 10rem 0;
+    .card {
+        background-color: $theme-white;
+        font-family: 'Courier Prime', sans-serif;
+        width: 18rem;
+        padding: 0;
+        border: 0;
+
+        input:focus, button:focus {
+            outline:0px;
+            -webkit-appearance:none;
+            box-shadow: none;
+        }
+
+        .card-header {
+            margin: 0;
+            .btn {
+                width: 100%;
+                padding: 1.5rem;
+                color: $theme-white;
+                font-weight: 700;
+            }
+            .col {
+                padding: 0;
+            }
+        }
+        .btn-group {
+            padding: 0;
+            background-color: $theme-dark;
+        }
+        .form-control {
+            border-color: $theme-white;
+            background-color: $theme-white-whiter;
+        }
+    }
+}
+
+@media (min-width: 0px) {
+    .bg {
+        height: 667px;
+        background-size: 1000px 667px;
+    }
+}
+
+@media (min-width: 760px) {
+    .bg {
+        height: 867px;
+        background-size: 1300px 867px;
+    }
+}
+
+
+@media (min-width: 1600px) {
+    .bg {
+        height: 1067px;
+        background-size: 1600px 1067px;
+    }
+}

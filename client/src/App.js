@@ -1,32 +1,57 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {Component} from 'react';
-import './App.css';
+import './css/App.css';
 
 class Swapper extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             leftWinOpen: true,
+            styleLeft: {backgroundColor : "#303030"},
+            styleRight: {backgroundColor : "#1c1c1c"}
         }
         this.toggleLeft = this.toggleLeft.bind(this);
         this.toggleRight = this.toggleRight.bind(this);
     }
 
+
     toggleLeft() {
-        this.setState({ leftWinOpen: true});
+        this.setState({
+            leftWinOpen: true,
+            styleLeft: {backgroundColor : "#303030"},
+            styleRight: {backgroundColor : "#1c1c1c"}
+        });
     }
 
     toggleRight() {
-        this.setState({ leftWinOpen: false});
+        this.setState({
+            leftWinOpen: false,
+            styleLeft: {backgroundColor : "#1c1c1c"},
+            styleRight: {backgroundColor : "#303030"}
+        });
     }
 
     render() {
+        const styleLeft = this.state.styleLeft;
+        const styleRight = this.state.styleRight;
         const leftWinOpen = this.state.leftWinOpen;
         return (
-            <div className="container card main-form">
+            <div className="container card">
             <div className="card-header btn-group">
-                <button className="btn btn-secondar" onClick={this.toggleLeft}>Login</button>
-                <button className="btn btn-secondar" onClick={this.toggleRight}>Register</button>
+                <div className="col">
+                    <button
+                        className="btn"
+                        style={styleLeft}
+                        onClick={this.toggleLeft}>Login
+                    </button>
+                </div>
+                <div className="col">
+                    <button
+                        className="btn"
+                        style={styleRight}
+                        onClick={this.toggleRight}>Register
+                    </button>
+                </div>
             </div>
             {leftWinOpen ? (
                 <LoginForm />
