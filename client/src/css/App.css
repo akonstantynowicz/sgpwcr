@@ -50,6 +50,11 @@
     .login .card .form-control {
       border-color: #cfcfe2;
       background-color: #e8e8f1; }
+    .login .card .form-submit {
+      color: #cfcfe2;
+      background-color: #303030;
+      margin-top: 1.5rem;
+      padding: 0.5rem 1.5rem; }
 
 @media (min-width: 0px) {
   .bg {

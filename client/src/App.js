@@ -42,21 +42,21 @@ class Swapper extends React.Component {
                     <button
                         className="btn"
                         style={styleLeft}
-                        onClick={this.toggleLeft}>Login
+                        onClick={this.toggleLeft}>{this.props.leftLabel}
                     </button>
                 </div>
                 <div className="col">
                     <button
                         className="btn"
                         style={styleRight}
-                        onClick={this.toggleRight}>Register
+                        onClick={this.toggleRight}>{this.props.rightLabel}
                     </button>
                 </div>
             </div>
             {leftWinOpen ? (
-                <LoginForm />
+                this.props.left
             ) : (
-                <RegisterForm />
+                this.props.right
             )}
             </div>
         );
@@ -74,8 +74,9 @@ class LoginForm extends React.Component {
             </div>
             <div className="form-group">
                 <label for="password">Password</label>
-                <input type="text" id="password" class="form-control"></input>
+                <input type="password" id="password" class="form-control"></input>
             </div>
+            <button type="submit" class="btn form-submit">Submit</button>
             </form>
         )
     }
@@ -87,17 +88,26 @@ class RegisterForm extends React.Component {
         return (
             <form className="card-body">
             <div className="form-group">
-                <label for="email">Email</label>
-                <input type="text" id="email" class="form-control"></input>
-            </div>
-            <div className="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" class="form-control"></input>
             </div>
             <div className="form-group">
-                <label for="password">Password</label>
-                <input type="text" id="password" class="form-control"></input>
+                <label for="email">Email</label>
+                <input type="text" id="email" class="form-control"></input>
             </div>
+            <div className="form-group">
+                <label for="emailRepeat">Repeat email</label>
+                <input type="text" id="emailRepeat" class="form-control"></input>
+            </div>
+            <div className="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control"></input>
+            </div>
+            <div className="form-group">
+                <label for="passwordRepeat">Repeat password</label>
+                <input type="password" id="passwordRepeat" class="form-control"></input>
+            </div>
+            <button type="submit" class="btn form-submit">Submit</button>
             </form>
         );
     }
@@ -111,7 +121,12 @@ class App extends Component {
                 <h1 className="jumbotron top">SGPWCR</h1>
                 <div className="bg">
                     <div className="login">
-                    <Swapper />
+                    <Swapper
+                        left={<LoginForm/>}
+                        right={<RegisterForm/>}
+                        leftLabel={"Login"}
+                        rightLabel={"Register"}
+                    />
                     </div>
                 </div>
             </div>
