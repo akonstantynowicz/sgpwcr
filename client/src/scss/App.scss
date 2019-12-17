@@ -30,6 +30,7 @@ $bg-height: 100vh;
     color: $theme-white;
     background-color: $theme-dark;
     margin: 0;
+    border-bottom: 0.75rem $theme-dark-whiter solid;
 }
 
 .login {

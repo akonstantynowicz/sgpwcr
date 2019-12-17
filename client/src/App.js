@@ -32,9 +32,8 @@ class Swapper extends React.Component {
     }
 
     render() {
-        const styleLeft = this.state.styleLeft;
-        const styleRight = this.state.styleRight;
-        const leftWinOpen = this.state.leftWinOpen;
+        const {styleLeft, styleRight, leftWinOpen} = this.state
+
         return (
             <div className="container card">
             <div className="card-header btn-group">

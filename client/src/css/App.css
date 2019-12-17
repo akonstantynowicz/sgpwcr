@@ -21,7 +21,8 @@
   font-size: 4rem;
   color: #cfcfe2;
   background-color: #1c1c1c;
-  margin: 0; }
+  margin: 0;
+  border-bottom: 0.75rem #303030 solid; }
 
 .login {
   padding: 10rem 0; }
