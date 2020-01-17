@@ -18,7 +18,7 @@ public class UserService {
     }
 
     public User addNewUser(User user){
-        if (userRepository.findByEmail() != null || userRepository.findByLogin() != null){
+        if (userRepository.findByEmail(user.getEmail()) != null || userRepository.findByLogin(user.getLogin()) != null){
             return null;
         }
         return userRepository.save(user);
