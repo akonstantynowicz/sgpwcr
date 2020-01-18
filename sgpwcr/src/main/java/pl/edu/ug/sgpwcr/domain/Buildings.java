@@ -12,6 +12,18 @@ public class Buildings {
     private int clayProducingBuildingLevel;
     private int ironProducingBuildingLevel;
 
+    public Buildings(long id, int townHallLevel, int armyProducingBuildingLevel, int woodProducingBuildingLevel, int clayProducingBuildingLevel, int ironProducingBuildingLevel) {
+        this.id = id;
+        this.townHallLevel = townHallLevel;
+        this.armyProducingBuildingLevel = armyProducingBuildingLevel;
+        this.woodProducingBuildingLevel = woodProducingBuildingLevel;
+        this.clayProducingBuildingLevel = clayProducingBuildingLevel;
+        this.ironProducingBuildingLevel = ironProducingBuildingLevel;
+    }
+
+    public Buildings() {
+    }
+
     @Id
     public long getId() {
         return id;

@@ -13,6 +13,9 @@ public class Army {
         this.amount = amount;
     }
 
+    public Army() {
+    }
+
     @Id
     public long getId() {
         return id;

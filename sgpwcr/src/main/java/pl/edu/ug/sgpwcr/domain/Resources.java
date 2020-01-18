@@ -11,6 +11,14 @@ public class Resources {
     private long clay;
     private long iron;
 
+    public Resources(long id, long wood, long food, long clay, long iron) {
+        this.id = id;
+        this.wood = wood;
+        this.food = food;
+        this.clay = clay;
+        this.iron = iron;
+    }
+
     @Id
     public long getId() {
         return id;
